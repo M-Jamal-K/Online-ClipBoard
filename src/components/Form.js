@@ -18,12 +18,27 @@ function Form(props) {
           <span className={classes.lblname}>{props.labelText}</span>
         )}
         {props.showInput ? (
-          <textarea rows="4" readOnly className={classes.readOnly}></textarea>
+          <textarea
+            rows="4"
+            value={props.output}
+            readOnly
+            className={classes.readOnly}
+          ></textarea>
         ) : (
           <textarea rows="4" required></textarea>
         )}
       </label>
-      <button>{props.btnText}</button>
+      <button disabled={!props.pending ? false : true}>
+        {!props.pending ? props.btnText : "Loading...."}
+      </button>
+      {props.id && !props.pending && !props.error && (
+        <p className={classes.idandInfo}>
+          ID to retrieve text is: <strong>{props.id}</strong>
+          <span>
+            This data will be destroyed after one hour when you refresh the site
+          </span>
+        </p>
+      )}
     </form>
   );
 }

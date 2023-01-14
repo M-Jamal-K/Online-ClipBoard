@@ -13,7 +13,7 @@
 }
 .label {
   align-items: center;
-  margin: 20px;
+  margin: 10px;
 }
 .label > textarea,
 .label > input {
@@ -34,4 +34,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.idandInfo {
+  display: flex;
+  flex-direction: column;
 }
