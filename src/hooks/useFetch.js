@@ -21,7 +21,7 @@ export const useFetch = (url, val, option) => {
           setError(null);
         } catch (err) {
           setIsPending(false);
-          setError("Could not Post the data");
+          setError("Something Went Wrong :(");
           console.log(err.message);
         }
       }; // end of fetchData function

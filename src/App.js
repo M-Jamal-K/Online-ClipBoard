@@ -5,7 +5,7 @@ import { useFetch } from "./hooks/useFetch";
 
 function App() {
   const { data } = useFetch(
-    "https://json-server-rest-api.glitch.me/userData",
+    "https://json-server-rest-api.glitch.me/userData?id=true",
     "null"
   );
   if (data) {

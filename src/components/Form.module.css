@@ -24,6 +24,9 @@
   font-size: 1em;
   outline: none;
 }
+.label > textarea{
+  min-height: 10rem;
+}
 .lblname {
   padding: 20px;
 }
