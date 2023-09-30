@@ -4,6 +4,7 @@ import OutputCom from "./components/OutputCom";
 import { useFetch } from "./hooks/useFetch";
 
 function App() {
+  console.log(process.env.SEC_KEY)
   const { data } = useFetch(
     "https://json-server-rest-api.glitch.me/userData?id=true",
     "null"
@@ -29,7 +30,6 @@ function App() {
 
   return (
     <div className="App">
-<div>test ENV {process.env.SEC_KEY}</div>
       <Header />
       <InputCom />
       <OutputCom />
