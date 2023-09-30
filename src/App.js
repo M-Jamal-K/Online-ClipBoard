@@ -5,6 +5,8 @@ import { useFetch } from "./hooks/useFetch";
 
 function App() {
   console.log(process.env.SEC_KEY)
+  console.log(environment)
+  console.log(SEC_KEY)
   const { data } = useFetch(
     "https://json-server-rest-api.glitch.me/userData?id=true",
     "null"
