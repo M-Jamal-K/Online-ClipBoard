@@ -47,8 +47,12 @@ button {
   width: 1rem;
   display: block;
 }
+@media screen and (min-width: 750px) {
 button.copy-clipboard{
     opacity: 0;
+}
+}
+button.copy-clipboard{
     display: flex;
     position: absolute;
     color: #3f3743;
