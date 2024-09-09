@@ -34,7 +34,7 @@ function Form(props) {
           <textarea rows="4" required></textarea>
         )}
       </label>
-      <button disabled={!props.pending ? false : true}>
+      <button type="submit" disabled={!props.pending ? false : true}>
         {!props.pending ? props.btnText : "Loading...."}
       </button>
       {props.id && !props.pending && !props.error && (
