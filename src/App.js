@@ -10,14 +10,13 @@ function App() {
   );
   if (data) {
     data.forEach((element) => {
-      console.log(new Date().getTime() >= element.expiredAt);
       if (new Date().getTime() >= element.expiredAt) {
         fetch(`https://json-server-rest-api.glitch.me/userData/${element.id}`, {
           method: "DELETE"
         })
           .then((res) => {
             if (res.ok) {
-              console.log("Cleared");
+              // console.log("Cleared");
             }
           })
           .catch((err) => {

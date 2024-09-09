@@ -1,3 +1,5 @@
+import { copyToClipBoard } from "../utils/helper";
+import CopyClipBoard from "./CopyClipBoard";
 import classes from "./Form.module.css";
 
 function Form(props) {
@@ -18,12 +20,16 @@ function Form(props) {
           <span className={classes.lblname}>{props.labelText}</span>
         )}
         {props.showInput ? (
+          <>
           <textarea
             rows="4"
             value={props.output}
+            onClick={()=> copyToClipBoard(props.output)}
             readOnly
-            className={classes.readOnly}
-          ></textarea>
+            className={`${classes.readOnly} textArea-readOnly`}
+            ></textarea>
+            {props.showCopyButton && <CopyClipBoard value={props.output} />}
+            </>
         ) : (
           <textarea rows="4" required></textarea>
         )}

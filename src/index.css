@@ -40,3 +40,31 @@ button {
   width: fit-content;
   opacity: 0.7;
 }
+
+.icon-sm {
+  stroke-width: 2;
+  height: 1rem;
+  width: 1rem;
+  display: block;
+}
+button.copy-clipboard{
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    color: #3f3743;
+    right: 3%;
+    padding: 5px;
+    font-size: 1rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: .3s opacity cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.textArea-readOnly:hover + button.copy-clipboard,
+button.copy-clipboard:hover{
+  opacity: 1;
+}
