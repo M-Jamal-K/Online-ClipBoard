@@ -3,7 +3,7 @@ import { copyToClipBoard } from "../utils/helper";
 const CopyClipBoard = ({value}) => {
   return (
     <>
-      <button className="copy-clipboard" onClick={()=>{copyToClipBoard(value)}}>
+      <button type="button" className="copy-clipboard" onClick={()=>{copyToClipBoard(value)}}>
         <svg
           width="100%"
           height="100%"
