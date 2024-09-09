@@ -15,9 +15,7 @@ function App() {
           method: "DELETE"
         })
           .then((res) => {
-            if (res.ok) {
-              // console.log("Cleared");
-            }
+            if (res.ok) {}
           })
           .catch((err) => {
             console.log(err);
