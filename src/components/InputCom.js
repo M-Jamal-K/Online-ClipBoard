@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import Form from "./Form";
+import { BASE_URL } from "../utils/Constant";
 
 export default function InputCom() {
   const [text, setText] = useState(null);
   const [randomID, setRandomID] = useState(null);
 
   const { isPending, error } = useFetch(
-    "https://json-server-rest-api.glitch.me/userData",
+    BASE_URL,
     text,
     {
       method: "POST",

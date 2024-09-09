@@ -22,14 +22,11 @@ export const useFetch = (url, val, option) => {
         } catch (err) {
           setIsPending(false);
           setError("Something Went Wrong :(");
-          console.log(err.message);
         }
       }; // end of fetchData function
 
       fetchData();
-      return () => {
-        console.log("lol");
-      };
+      return () => {};
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url, val]);

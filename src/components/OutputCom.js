@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import Form from "./Form";
+import { BASE_URL } from "../utils/Constant";
 
 export default function OutputCom() {
   const [id, setId] = useState(null);
 
-  const { data, isPending, error } = useFetch(
-    `https://json-server-rest-api.glitch.me/userData?id=${id}`,
-    id
-  );
+  const { data, isPending, error } = useFetch(`${BASE_URL}?id=${id}`, id);
 
   const formSubmitFunc = (e) => {
     e.preventDefault();
@@ -23,6 +21,7 @@ export default function OutputCom() {
         inputlabelText="Retrieve from Online Clipboard:"
         btnText="Retrieve"
         formSubmitFunc={formSubmitFunc}
+        showCopyButton={true}
         showInput={true}
         pending={isPending}
         output={data ? (data.length ? data[0].data : "Data Not Fount '_'") : ""}
